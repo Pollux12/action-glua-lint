@@ -8,8 +8,8 @@ const fs = require('fs');
 
 
 // Other constants
-const GLUA_LINT_TAG = '1.1.4';
-const GLUA_FIXER_TAG = '1.17.2';
+const GLUA_LINT_TAG = '1.1.5';
+const GLUA_FIXER_TAG = '1.24.2';
 const REGEX = '([a-zA-Z_\\-\\/.]+):\\s\\[([a-zA-Z]+)\\]\\sline\\s([0-9]+),\\scolumn\\s([0-9]+)\\s-\\sline\\s([0-9]+),\\scolumn\\s([0-9]+):\\s+(.*)';
 
 
@@ -29,7 +29,7 @@ console.log('');
 // Download the linter
 console.log('Downloading linter...');
 exec.execSync('mkdir ' + __dirname + '/dependencies', { stdio: 'ignore' });
-const downloadURL = 'https://github.com/FPtje/GLuaFixer/releases/download/' + GLUA_FIXER_TAG + '/glualint-' + GLUA_FIXER_TAG + '-linux.zip';
+const downloadURL = 'https://github.com/FPtje/GLuaFixer/releases/download/' + GLUA_FIXER_TAG + '/glualint-' + GLUA_FIXER_TAG + '-x86_64-linux.zip';
 exec.execSync('wget -O ' + __dirname + '/dependencies/glualint.zip ' + downloadURL, { stdio: 'ignore' });
 
 console.log('Unzipping linter...');
